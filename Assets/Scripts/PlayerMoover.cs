@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class PlayerMoover : MonoBehaviour
 {
+    public GameObject camerro;
+
     public Animator animer;
     public GameObject bodl;
     public float speed;
@@ -68,10 +70,14 @@ public class PlayerMoover : MonoBehaviour
         
         Vector3 inputdIR = new Vector3(Input.GetAxis("Horizontal"),0,Input.GetAxis("Vertical"));
 
-        rb.AddForce(inputdIR *speed);
+
+
+        rb.AddForce(((inputdIR.z * camerro.transform.forward) + (inputdIR.x * camerro.transform.right)) *speed);
+
+        var skibidi = ((inputdIR.z * camerro.transform.forward) + (inputdIR.x * camerro.transform.right));
         
-        if(inputdIR.magnitude>0)
-        {RotateTowardsVector(inputdIR,2);
+        if(skibidi.magnitude>0)
+        {RotateTowardsVector(skibidi,2);
         animer.SetBool("Skib",true);
 
         }else

@@ -3,7 +3,17 @@ guid: 430452fd03f3c8c43ac5b9a56f0770f5
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "cia\u0142o"
+    second: {fileID: 2100000, guid: 69895a85953eb85408aa8e3694dbdcd2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: twarz
+    second: {fileID: 2100000, guid: a26dcc3c9d64a7245a913f3b3b3ae564, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
