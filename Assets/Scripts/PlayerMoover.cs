@@ -77,7 +77,7 @@ public class PlayerMoover : MonoBehaviour
         var skibidi = ((inputdIR.z * camerro.transform.forward) + (inputdIR.x * camerro.transform.right));
         
         if(skibidi.magnitude>0)
-        {RotateTowardsVector(skibidi,2);
+        {RotateTowardsVector(skibidi,4);
         animer.SetBool("Skib",true);
 
         }else
